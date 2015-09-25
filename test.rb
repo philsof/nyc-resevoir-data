@@ -13,9 +13,15 @@ class Reservoir
     @data << datas
   end
 
-  def vizualize
+  def vizualize_one_point_in_time
   info = data.map {|datapoint| [datapoint.reservoir, datapoint.level] }
-  puts AsciiCharts::Cartesian.new(info, :bar => true).draw
+  puts AsciiCharts::Cartesian.new(info, :bar => true, :title => "NYC Reservoir System Levels").draw
+  end
+
+
+
+  def one_day_data
+
   end
 
 end
@@ -32,17 +38,17 @@ class DataPoint
 
 end
 
-one = DataPoint.new("Never Sink", "1/1/15", 88)
-two = DataPoint.new("Never Sink","1/2/15", 89)
-three = DataPoint.new("Never Sink","1/3/15", 92)
-four = DataPoint.new("Never Sink","1/4/15", 95)
-five = DataPoint.new("Never Sink","1/5/15", 88)
+one = DataPoint.new("Never Sink", "1/1/15", 70.05)
+two = DataPoint.new("Schoharie","1/1/15", 50.86)
+three = DataPoint.new("Pepacton","1/1/15", 92.90)
+four = DataPoint.new("Connonsville","1/1/15", 65.93)
+five = DataPoint.new("Croton","1/1/15", 88.34)
 
 data = [one, two, three, four, five]
 
 never_sink = Reservoir.new("Never Sink", data)
 
-never_sink.vizualize
+never_sink.over_time
 
 
 
