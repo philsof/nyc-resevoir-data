@@ -17,12 +17,13 @@ module Parser
   end
 
   def self.load_json
-    data = open("https://data.cityofnewyork.us/resource/zkky-n5j3.json").read
+    data = open("https://data.cityofnewyork.us/resource/zkky-n5j3?$limit=2000").read
     data = JSON.parse(data)
   end
 
   def self.get_data_objects(data, resevoir)
     data.each_with_object([]) do |(row), data_points|
+      # require 'pry';binding.pry
       date_field = Time.at(row[resevoir + '_date'])
       level = row[resevoir + '_storage'].to_f / CAPACITIES[resevoir] * 100
 
