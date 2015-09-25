@@ -6,3 +6,9 @@ This was a 3 hour challenge for Phase 1 in DBC NYC. We utilized the NYC OpenData
 
 Please see link below for more information:
 https://data.cityofnewyork.us/Environment/Reservoir-Storage/83pn-gcmw/about
+
+Creators: 
+[ajessee](https://www.github.com/ajessee)
+[philsof](https://www.github.com/philsof)
+[r05al](https://www.github.com/r05al)
+[stevenxl](https://www.github.com/stevenxl)
